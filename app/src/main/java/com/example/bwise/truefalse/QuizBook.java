@@ -7,7 +7,7 @@ package com.example.bwise.truefalse;
 public class QuizBook {
 
     public static String[] questions = new String []{
-            "Magnets have 2 poles",
+            "We live in the Milky Way Galaxy",
             "The Earth is flat",
             "Bitcoin is a Ponzi scheme",
             "Oceans are fresh water",
@@ -20,6 +20,15 @@ public class QuizBook {
     };
 
     public static boolean[] answers = new boolean[]{
-            true, false, false, false, true, false, true, false, true, false
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            true,
+            false
     };
 }
