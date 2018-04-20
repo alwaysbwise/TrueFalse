@@ -1,6 +1,8 @@
 package com.example.bwise.truefalse;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -118,7 +120,7 @@ public class QuizActivity extends Activity {
     private void updateScore(int point) {
         scoreTextView.setText("" + score);
     }
-/*
+
     public void clickExit(View view) {
         askToClose();
     }
@@ -129,5 +131,24 @@ public class QuizActivity extends Activity {
         askToClose();
     }
 
-    */
+    private void askToClose(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
+        builder.setMessage("Are you sure you want to quit?");
+        builder.setCancelable(true);
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                finish();
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.cancel();
+
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
 }

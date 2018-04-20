@@ -5,19 +5,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#666666"
-    tools:context="com.example.bwise.truefalse.ResultsActivity">
+    tools:context="com.example.bwise.truefalse.ResultsActivity"
+    tools:layout_editor_absoluteY="73dp">
 
     <TextView
         android:id="@+id/grade"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="67dp"
+        android:elevation="16dp"
         android:padding="16dp"
-        android:text="Con Grat U Lations"
+        android:text="Congratulations"
         android:textAlignment="center"
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="195dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textViewFinalScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRetry"
+        android:layout_width="130dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="215dp"
+        android:backgroundTint="#f348cb"
+        android:text="Retry"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGrade" />
+
+    <TextView
+        android:id="@+id/textViewFinalScore"
+        android:layout_width="203dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewGrade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grade" />
+
+    <TextView
+        android:id="@+id/textViewGrade"
+        android:layout_width="204dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="31dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRetry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFinalScore" />
 
 </android.support.constraint.ConstraintLayout>
