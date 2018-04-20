@@ -91,7 +91,7 @@ public class QuizActivity extends Activity {
                         updateQuestion();
                     }
                 }
-                // if the answer was incorrect follow same process
+                // if the answer was incorrect follow same process as for correct
                 else {
                     if (questionNumber == QuizBook.questions.length) {
                         Intent i = new Intent(QuizActivity.this, ResultsActivity.class);
@@ -125,17 +125,18 @@ public class QuizActivity extends Activity {
         askToClose();
     }
 
-
     @Override
     public void onBackPressed() {
         askToClose();
     }
 
     private void askToClose(){
+        //create dialog box to ask for closing confirmation
         AlertDialog.Builder builder = new AlertDialog.Builder(QuizActivity.this);
-        builder.setMessage("Are you sure you want to quit?");
+        builder.setMessage("Are you sure you want to exit?");
         builder.setCancelable(true);
-        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+        //set the onClick for the dialog box buttons
+        builder.setPositiveButton("Get Me Outta Here!", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
                 finish();
